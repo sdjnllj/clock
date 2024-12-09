@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>认识时钟 - 教学版</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="clock-container">
+            <div class="digital-clock">
+                <span class="time hidden">00:00</span>
+                <button id="show-answer" class="answer-btn">显示答案</button>
+            </div>
+            <div class="analog-clock">
+                <div class="outer-circle">
+                    <!-- 小时刻度 -->
+                    <div class="hour-marks">
+                        <div class="mark mark-1">1</div>
+                        <div class="mark mark-2">2</div>
+                        <div class="mark mark-3">3</div>
+                        <div class="mark mark-4">4</div>
+                        <div class="mark mark-5">5</div>
+                        <div class="mark mark-6">6</div>
+                        <div class="mark mark-7">7</div>
+                        <div class="mark mark-8">8</div>
+                        <div class="mark mark-9">9</div>
+                        <div class="mark mark-10">10</div>
+                        <div class="mark mark-11">11</div>
+                        <div class="mark mark-12">12</div>
+                    </div>
+                    <!-- 分钟刻度 -->
+                    <div class="minute-marks"></div>
+                    <div class="hand hour"></div>
+                    <div class="hand minute"></div>
+                    <div class="center-dot"></div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <div class="mode-switch">
+                <button id="mode-toggle" class="mode-btn">切换到实时模式</button>
+            </div>
+            <div class="time-controls">
+                <div class="control-group">
+                    <label>时针：</label>
+                    <input type="number" id="hour-input" min="1" max="12" value="12">
+                </div>
+                <div class="control-group">
+                    <label>分针：</label>
+                    <input type="number" id="minute-input" min="0" max="59" value="0">
+                </div>
+                <button id="set-time" class="primary-btn">设置时间</button>
+            </div>
+            <div class="preset-times">
+                <h3>练习时间</h3>
+                <div class="preset-buttons">
+                    <button class="preset-btn" data-hour="3" data-minute="0">3:00</button>
+                    <button class="preset-btn" data-hour="6" data-minute="30">6:30</button>
+                    <button class="preset-btn" data-hour="9" data-minute="15">9:15</button>
+                    <button class="preset-btn" data-hour="11" data-minute="45">11:45</button>
+                </div>
+            </div>
+            <button class="theme-toggle">切换主题</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
